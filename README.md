@@ -6,4 +6,5 @@
 - Spotify;
 - Chrome;
 - Teamviewer;
-- Node.js (v12)
+- VLC Media Player;
+- Node.js (v12);

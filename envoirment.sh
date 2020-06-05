@@ -83,6 +83,11 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 sudo apt install -y ./teamviewer_amd64.deb
 # </TEAMVIEWER>
 
+# <VLC>
+echo 'installing vlc media player'
+sudo snap install vlc
+# </VLC>
+
 # <NODEJSv12.18>
 echo 'installing Node.v.12.18'
 wget https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-x64.tar.xz
