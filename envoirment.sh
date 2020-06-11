@@ -88,6 +88,11 @@ echo 'installing vlc media player'
 sudo snap install vlc
 # </VLC>
 
+echo 'installing discord'
+wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
+sudo dpkg -i discord.deb
+sudo apt-get install -f
+
 # <NODEJSv12.18>
 echo 'installing Node.v.12.18'
 wget https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-x64.tar.xz

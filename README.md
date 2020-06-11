@@ -7,4 +7,5 @@
 - Chrome;
 - Teamviewer;
 - VLC Media Player;
+- Discord;
 - Node.js (v12);
