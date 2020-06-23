@@ -90,8 +90,8 @@ sudo snap install vlc
 
 echo 'installing discord'
 wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
-sudo dpkg -i discord.deb
 sudo apt-get install -f
+sudo dpkg -i discord.deb
 
 # <STEAM>
 #echo 'instaling steam'
