@@ -94,12 +94,12 @@ sudo dpkg -i discord.deb
 sudo apt-get install -f
 
 # <STEAM>
-echo 'instaling steam'
-sudo apt upgrade
-sudo apt-get install libc6-i386
-wget http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
-sudo dpkg -i steam_latest.deb
-sudo apt-get install -f
+#echo 'instaling steam'
+#sudo apt upgrade
+#sudo apt-get install libc6-i386
+#wget http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
+#sudo dpkg -i steam_latest.deb
+#sudo apt-get install -f
 # </STEAM>
 
 # <NODEJSv12.18>
