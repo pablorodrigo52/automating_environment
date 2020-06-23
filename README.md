@@ -8,4 +8,5 @@
 - Teamviewer;
 - VLC Media Player;
 - Discord;
+- Steam
 - Node.js (v12);
