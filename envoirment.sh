@@ -93,6 +93,15 @@ wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.
 sudo dpkg -i discord.deb
 sudo apt-get install -f
 
+# <STEAM>
+echo 'instaling steam'
+sudo apt upgrade
+sudo apt-get install libc6-i386
+wget http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
+sudo dpkg -i steam_latest.deb
+sudo apt-get install -f
+# </STEAM>
+
 # <NODEJSv12.18>
 echo 'installing Node.v.12.18'
 wget https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-x64.tar.xz
