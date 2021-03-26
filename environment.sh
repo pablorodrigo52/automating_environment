@@ -1,24 +1,20 @@
 sudo apt-get update
-
 echo 'installing curl' 
 sudo apt install curl -y
 
 # <GIT>
 echo 'installing git' 
 sudo apt install git -y
-
 echo "What name do you want to use in GIT user.name?"
 echo "For example, mine will be \"Erick Wendel\""
 read git_config_user_name
 git config --global user.name "$git_config_user_name"
 clear 
-
 echo "What email do you want to use in GIT user.email?"
 echo "For example, mine will be \"erick.workspace@gmail.com\""
 read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
-
 echo "Can I set VIM as your default GIT editor for you? (y/n)"
 read git_core_editor_to_vim
 if echo "$git_core_editor_to_vim" | grep -iq "^y" ;then
@@ -45,15 +41,15 @@ sudo apt-get install apt-transport-https -y
 sudo apt-get update
 sudo apt-get install code -y # or code-insiders
 echo 'installing extensions'
-code --install-extension Dart-Code.dart-code
-code --install-extension rocketseat.theme-omni
-code --install-extension esbenp.prettier-vscode
-code --install-extension vscjava.vscode-java-debug
-code --install-extension Dart-Code.flutter
-code --install-extension ecmel.vscode-html-css
-code --install-extension xabikos.JavaScriptSnippets
+code --install-extension dracula-theme.theme-dracula
 code --install-extension PKief.material-icon-theme
+code --install-extension esbenp.prettier-vscode
+code --install-extension alexcvzz.vscode-sqlite
+code --install-extension xabikos.JavaScriptSnippets
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension ecmel.vscode-html-css
 code --install-extension sneezry.watch-in-chrome
+code --install-extension visualstudioexptteam.vscodeintellicode
 # </VS CODE>
 
 # <SUBLIME>
@@ -67,8 +63,8 @@ sudo apt-get install sublime-text
 # </SUBLIME>
 
 # <SPOTIFY>
-echo 'installing spotify' 
-snap install spotify
+# echo 'installing spotify' 
+# snap install spotify
 # </SPOTIFY>
 
 # <CHROME>
@@ -78,9 +74,9 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 # </CHROME>
 
 # <TEAMVIEWER>
-echo 'installing teamviewer'
-wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-sudo apt install -y ./teamviewer_amd64.deb
+# echo 'installing teamviewer'
+# wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+# sudo apt install -y ./teamviewer_amd64.deb
 # </TEAMVIEWER>
 
 # <VLC>
@@ -88,10 +84,10 @@ echo 'installing vlc media player'
 sudo snap install vlc
 # </VLC>
 
-echo 'installing discord'
-wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
-sudo apt-get install -f
-sudo dpkg -i discord.deb
+# echo 'installing discord'
+# wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
+# sudo apt-get install -f
+# sudo dpkg -i discord.deb
 
 # <STEAM>
 #echo 'instaling steam'
@@ -103,10 +99,5 @@ sudo dpkg -i discord.deb
 # </STEAM>
 
 # <NODEJSv12.18>
-echo 'installing Node.v.12.18'
-wget https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-x64.tar.xz
-tar xf node-v12.18.0-linux-x64.tar.xz -C /opt
-mv ~/node-v12.18.0-linux-x64 /opt/nodejs
-echo 'setting ~/.bashrc'
-echo 'export NODE_SDK=/opt/nodejs/bin' >> ~/.bashrc 
-# </NODEJSv12>
+echo 'installing Node'
+sudo apt-get install nodejs -y
