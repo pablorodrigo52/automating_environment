@@ -2,27 +2,23 @@ sudo apt-get update
 echo 'installing curl' 
 sudo apt install curl -y
 
+#terminal theme
+sudo apt-get install dconf-cli uuid-runtime -y
+
+mkdir -p "$HOME/src"
+cd "$HOME/src"
+git clone https://github.com/Mayccoll/Gogh.git gogh
+cd gogh/themes
+export TERMINAL=gnome-terminal
+./dracula.sh
+clear
+
 # <GIT>
 echo 'installing git' 
 sudo apt install git -y
-echo "What name do you want to use in GIT user.name?"
-echo "For example, mine will be \"Erick Wendel\""
-read git_config_user_name
-git config --global user.name "$git_config_user_name"
-clear 
-echo "What email do you want to use in GIT user.email?"
-echo "For example, mine will be \"erick.workspace@gmail.com\""
-read git_config_user_email
-git config --global user.email $git_config_user_email
-clear
-echo "Can I set VIM as your default GIT editor for you? (y/n)"
-read git_core_editor_to_vim
-if echo "$git_core_editor_to_vim" | grep -iq "^y" ;then
-	git config --global core.editor vim
-else
-	echo "Okay, no problem. :) Let's move on!"
-fi
-
+git config --global user.name "Pablo Rodrigo"
+git config --global user.email "pablorodrigo552@gmail.com"
+git config --global core.editor vim
 echo "Generating a SSH Key"
 ssh-keygen -t rsa -b 4096 -C $git_config_user_email
 ssh-add ~/.ssh/id_rsa
